@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Links...</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">           
+    </head>
+    <body>
+        <script>
+        window.onload = function(){ //this line of code will wait for the DOM to load
+         //once loaded, it will execute the "anonymous" function which is the code here
+
+         //now in here we can find the element
+         //since there is no id or class, we can look for an input with name=submit
+         var submitInput = document.querySelectorAll("input[name=submit]")[0];
+
+         //once the element is found, we can attach the handler to it
+         submitInput.onclick = function(){ //once again this "anonymous" function executes when the event fires
+          //in here you can execute the timeout
+          //lets use an anonymous function instead of constructing one from a string
+          setTimeout(function(){
+           window.close();
+          },3000);
+         };
+        };
+        </script>
+
+    </body>
+</html>
